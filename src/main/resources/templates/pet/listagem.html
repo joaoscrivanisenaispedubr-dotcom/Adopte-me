@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem - Escola</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/Cadastro_alterar_listagem.css}">
+
+</head>
+<body>
+<div th:replace="~{fragments/menu.html :: menu}"></div>
+
+
+<main>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+        <h2>Listagem de Pets</h2>
+        <a th:href="@{/pet/cadastro}" class="btn btn-success">Cadastrar Novo</a>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Raça</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+             Caso não tenha registros
+            <tr th:if="${pets.empty}">
+                <td colspan="5" style="text-align: center;">
+                    Nenhum registro encontrado.
+                </td>
+            </tr>
+
+
+            <tr th:each="p : ${pets}">
+
+
+                <td>
+                    <img th:if="${p.foto != null}"
+                         th:src="@{'/pet_foto/' + ${p.foto}}"
+                         class="foto-tabela">
+
+                    <img th:if="${p.foto == null}"
+                         src="/pet_foto/default.png"
+                         class="foto-tabela">
+                </td>
+
+                <td th:text="${p.nome}"></td>
+                <td th:text="${p.idade}"></td>
+                <td th:text="${p.raca}"></td>
+
+                <td style="white-space: nowrap;">
+                    <a th:href="@{'/pet/excluir/' + ${p.id}}"
+                       class="btn btn-cancel"
+                       onclick="return confirm('Deseja realmente excluir este registro?');"
+                       style="margin-right: 8px;">
+                        Excluir
+                    </a>
+
+                    <a th:href="@{'/pet/alterar/' + ${p.id}}"
+                       class="btn btn-alter">
+                        Alterar
+                    </a>
+                </td>
+
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</main>
+
+</body>
+</html>

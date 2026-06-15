@@ -1,0 +1,159 @@
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: var(--branco);
+    border-radius: 24px;
+    padding: 36px 32px;
+    box-shadow: var(--sombra);
+    border: 1px solid rgba(42, 72, 173, 0.10);
+}
+
+.card h2 {
+    color: var(--azul-escuro);
+    font-size: 1.6rem;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--azul-claro);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--azul-escuro);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 14px;
+    border: 1px solid #d1d9f0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: #f8faff;
+    color: var(--texto);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--azul-medio);
+    background: var(--branco);
+    box-shadow: 0 0 0 3px rgba(42, 72, 173, 0.12);
+}a
+
+ .form-group textarea {
+     resize: vertical;
+     min-height: 90px;
+ }
+
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Container dos cards */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem */
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Corpo */
+.card-body {
+    padding: 20px;
+}
+
+.card-body p {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.card-body strong {
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+/* Nome em destaque */
+.card-body p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Efeito elegante */
+.card::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #06b6d4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .container {
+        gap: 16px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+}

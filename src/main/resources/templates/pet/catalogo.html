@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Adoção</title>
+
+    <link rel="stylesheet" th:href="@{/css/catalogo.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+
+    <div th:replace="~{fragments/menu.html :: menu}"></div>
+
+    <!-- Hero da página -->
+    <div class="hero-section">
+        <img src="/static/imagem/1.png" alt="Banner">
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+
+        <!-- Busca -->
+        <div class="busca-wrapper">
+            <input type="text" placeholder="Buscar por nome, raça ou porte...">
+            <button>Buscar</button>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filtros">
+            <button class="filtro-btn ativo">Todos</button>
+            <button class="filtro-btn">Pequeno</button>
+            <button class="filtro-btn">Médio</button>
+            <button class="filtro-btn">Grande</button>
+            <button class="filtro-btn">Filhote</button>
+            <button class="filtro-btn">Adulto</button>
+            <button class="filtro-btn">Idoso</button>
+        </div>
+
+        <!-- Grid de cachorros -->
+        <div class="catalogo-grid">
+
+            <div class="card-cachorro">
+                <img src="https://placedog.net/400/300?r=1" alt="Cachorro Thor">
+                <div class="card-info">
+                    <h3>Thor</h3>
+                    <p>Labrador · 2 anos · Macho</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Médio</span>
+                        <span class="card-tag">Vacinado</span>
+                        <span class="card-tag">Castrado</span>
+                    </div>
+                    <button class="btn-cta" style="width:100%">Quero adotar</button>
+                </div>
+            </div>
+
+            <div class="card-cachorro">
+                <img src="https://placedog.net/400/300?r=2" alt="Cachorra Luna">
+                <div class="card-info">
+                    <h3>Luna</h3>
+                    <p>SRD · 1 ano · Fêmea</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Pequeno</span>
+                        <span class="card-tag">Vacinada</span>
+                    </div>
+                    <button class="btn-cta" style="width:100%">Quero adotar</button>
+                </div>
+            </div>
+
+            <div class="card-cachorro">
+                <img src="https://placedog.net/400/300?r=3" alt="Cachorro Rex">
+                <div class="card-info">
+                    <h3>Rex</h3>
+                    <p>Pastor Alemão · 4 anos · Macho</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Grande</span>
+                        <span class="card-tag">Castrado</span>
+                    </div>
+                    <button class="btn-cta" style="width:100%">Quero adotar</button>
+                </div>
+            </div>
+
+            <div class="card-cachorro">
+                <img src="https://placedog.net/400/300?r=4" alt="Cachorra Mel">
+                <div class="card-info">
+                    <h3>Mel</h3>
+                    <p>Beagle · 3 anos · Fêmea</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Médio</span>
+                        <span class="card-tag">Vacinada</span>
+                        <span class="card-tag">Castrada</span>
+                    </div>
+                    <button class="btn-cta" style="width:100%">Quero adotar</button>
+                </div>
+            </div>
+
+            <div class="card-cachorro">
+                <img src="https://placedog.net/400/300?r=5" alt="Cachorro Bob">
+                <div class="card-info">
+                    <h3>Bob</h3>
+                    <p>SRD · 6 meses · Macho</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Pequeno</span>
+                        <span class="card-tag">Filhote</span>
+                    </div>
+                    <button class="btn-cta" style="width:100%">Quero adotar</button>
+                </div>
+            </div>
+
+            <div class="card-cachorro">
+                <img src="https://placedog.net/400/300?r=6" alt="Cachorra Nina">
+                <div class="card-info">
+                    <h3>Nina</h3>
+                    <p>Poodle · 7 anos · Fêmea</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Pequeno</span>
+                        <span class="card-tag">Idosa</span>
+                        <span class="card-tag">Vacinada</span>
+                    </div>
+                    <button class="btn-cta" style="width:100%">Quero adotar</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Paginação -->
+        <div class="paginacao">
+            <button>&#8249;</button>
+            <button class="ativo">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>&#8250;</button>
+        </div>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>🐾 Adopt-Me &copy; 2025 — Todos os direitos reservados</p>
+        <p style="margin-top: 8px; font-size: 14px; opacity: 0.7;">Transformando vidas, um latido de cada vez.</p>
+    </footer>
+
+    <script>
+        // Filtros ativos
+        document.querySelectorAll('.filtro-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
+                btn.classList.add('ativo');
+            });
+        });
+    </script>
+
+</body>
+</html>

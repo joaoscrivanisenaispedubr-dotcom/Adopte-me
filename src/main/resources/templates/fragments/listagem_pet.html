@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem - Pets</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/Cadastro_alterar_listagem.css}">
+
+
+</head>
+<body>
+<div th:fragment="listagem_pet">
+<!-- CARDS -->
+    <div class="container" id="listaCards">
+
+        <div class="card" th:each="p : ${pets}">
+
+            <img th:if="${p.foto != null}"
+                 th:src="@{'/pet_foto/' + ${p.foto}}">
+
+            <img th:if="${p.foto == null}"
+                 src="/pet_foto/default.png">
+
+            <div class="card-body">
+                <p><strong>Nome:</strong> <span th:text="${p.nome}"></span></p>
+                <p><strong>Raça:</strong> <span th:text="${p.raca}"></span></p>
+                <p><strong>Característica:</strong> <span th:text="${p.caracteristica}"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

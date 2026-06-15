@@ -1,0 +1,25 @@
+<div  th:fragment="menu">
+
+    <nav class="navbar">
+        <div class="logo">Adopt-<span>Me</span></div>
+        <ul class="nav-links">
+            <li><a href="/">Início</a></li>
+            <li><a th:href="@{/pet/catalogo}">Quero Adotar</a></li>
+            <li><a href="@{/home/contato}">Contato</a></li>
+
+            <!-- Submenu -->
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Serviços ▾</a>
+                <ul class="dropdown-content">
+                    <li><a th:href="@{/pet/cadastro}">Cadastrar Pet</a></li>
+                    <li><a th:href="@{/pet/meus}">Meus Pets</a></li>
+                    <li><a th:href="@{/adocao/status}">Status de Adoção</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#doe">Doe Agora</a></li>
+        </ul>
+        <a required th:href="@{/pessoa/cadastro}" class="btn-login"> Minha Conta</a>
+    </nav>
+
+</div>

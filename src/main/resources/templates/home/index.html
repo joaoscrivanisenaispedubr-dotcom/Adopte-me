@@ -1,0 +1,217 @@
+<!--<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt-Me | Encontre seu melhor amigo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+
+</head>
+<body>
+    <div th:replace="~{fragments/menu.html :: menu}"></div>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <p class="eyebrow">Encontre o amigo que já te espera</p>
+            <h1>Adote um cão e transforme dois corações</h1>
+            <p>Conheça cães resgatados, vacinados e preparados para encontrar um novo lar cheio de amor.</p>
+            <div class="hero-actions">
+                <a href="#adotar" class="btn-cta">Explorar Adotáveis</a>
+                <a href="#sobre" class="btn-secondary">Como funciona</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="info-text" id="sobre">
+            <h2>Por que adotar um amigo?</h2>
+            <p>
+                Adotar é um ato de amor que transforma não apenas a vida do animal, mas também a de quem o acolhe.
+                Existem milhares de cães esperando por uma segunda chance em abrigos. Ao escolher o <strong>Adopt-Me</strong>,
+                você ajuda a combater o abandono e ganha um companheiro leal para toda a vida.
+            </p>
+        </section>
+
+        <section class="banner-grid">
+
+        <div th:replace="~{/fragments/listagem_pet.html :: listagem_pet}">
+        </div>
+        </section>
+
+        <section class="banner-grid">
+            <div class="banner-item yellow">
+                <span class="tag">Importante</span>
+                <h3>Castração Solidária</h3>
+                <p>Saiba como agendar a castração do seu pet com valores reduzidos em nossas clínicas parceiras.</p>
+                <a href="#" class="link-banner">Saiba mais →</a>
+            </div>
+            <div class="banner-item blue">
+                <span class="tag">Urgente</span>
+                <h3>Apadrinhe um Cãozinho</h3>
+                <p>Não pode adotar agora? Você pode ajudar com ração e cuidados médicos de um peludo específico.</p>
+                <a href="#" class="link-banner">Quero ajudar →</a>
+            </div>
+        </section>
+
+
+
+
+        <section class="benefits-section">
+            <h2>Como ajudamos</h2>
+            <div class="benefits-grid">
+                <article class="benefit-card">
+                    <h3>Suporte completo</h3>
+                    <p>Acompanhamos todo o processo da adoção, desde o cadastro até o primeiro dia em casa.</p>
+                </article>
+                <article class="benefit-card">
+                    <h3>Adotar com segurança</h3>
+                    <p>Reforçamos critérios responsáveis para combinar cada animal com o lar ideal.</p>
+                </article>
+                <article class="benefit-card">
+                    <h3>Ajuda imediata</h3>
+                    <p>Parcerias com clínicas, abrigos e voluntários para acelerar o resgate e os cuidados.</p>
+                </article>
+            </div>
+
+        </section>
+
+        <section class="steps-section">
+            <div class="step">
+                <div class="step-icon">1</div>
+                <h4>Escolha</h4>
+                <p>Navegue pelas fotos e conheça a história de cada cãozinho disponível.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">2</div>
+                <h4>Entrevista</h4>
+                <p>Batemos  papo para garantir que o perfil do pet combina com sua rotina.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">3</div>
+                <h4>Finalize</h4>
+                <p>Assine o termo de responsabilidade e leve seu novo amigo para casa!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="doe"></div>
+    <footer class="footer" id="contato">
+        <div class="footer-content">
+            <p><strong>Adopt-Me</strong> - Conectando humanos e cães desde 2026.</p>
+            <p>Siga-nos nas redes sociais: @adoptme_oficial</p>
+            <p>Tem dúvidas? Envie uma mensagem e vamos ajudar você a encontrar o pet ideal.</p>
+            <p>&copy; 2026 Escola IANES - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt-Me | Encontre seu melhor amigo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+
+</head>
+<body>
+<div th:replace="~{fragments/menu.html :: menu}"></div>
+
+<header class="hero-section">
+    <div class="hero-content">
+        <p class="eyebrow">Encontre o amigo que já te espera</p>
+        <h1>Adote um cão e transforme dois corações</h1>
+        <p>Conheça cães resgatados, vacinados e preparados para encontrar um novo lar cheio de amor.</p>
+        <div class="hero-actions">
+            <a href="#adotar" class="btn-cta">Explorar Adotáveis</a>
+            <a href="#sobre" class="btn-secondary">Como funciona</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="info-text" id="sobre">
+        <h2>Por que adotar um amigo?</h2>
+        <p>
+            Adotar é um ato de amor que transforma não apenas a vida do animal, mas também a de quem o acolhe.
+            Existem milhares de cães esperando por uma segunda chance em abrigos. Ao escolher o <strong>Adopt-Me</strong>,
+            você ajuda a combater o abandono e ganha um companheiro leal para toda a vida.
+        </p>
+    </section>
+
+    <section class="banner-grid">
+        <div th:replace="~{fragments/listagem_pet.html :: listagem_pet}"></div>
+    </section>
+
+    <section class="banner-grid">
+        <div class="banner-item yellow">
+            <span class="tag">Importante</span>
+            <h3>Castração Solidária</h3>
+            <p>Saiba como agendar a castração do seu pet com valores reduzidos em nossas clínicas parceiras.</p>
+            <a href="#" class="link-banner">Saiba mais →</a>
+        </div>
+        <div class="banner-item blue">
+            <span class="tag">Urgente</span>
+            <h3>Apadrinhe um Cãozinho</h3>
+            <p>Não pode adotar agora? Você pode ajudar com ração e cuidados médicos de um peludo específico.</p>
+            <a href="#" class="link-banner">Quero ajudar →</a>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <h2>Como ajudamos</h2>
+        <div class="benefits-grid">
+            <article class="benefit-card">
+                <h3>Suporte completo</h3>
+                <p>Acompanhamos todo o processo da adoção, desde o cadastro até o primeiro dia em casa.</p>
+            </article>
+            <article class="benefit-card">
+                <h3>Adotar com segurança</h3>
+                <p>Reforçamos critérios responsáveis para combinar cada animal com o lar ideal.</p>
+            </article>
+            <article class="benefit-card">
+                <h3>Ajuda imediata</h3>
+                <p>Parcerias com clínicas, abrigos e voluntários para acelerar o resgate e os cuidados.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="steps-section">
+        <div class="step">
+            <div class="step-icon">1</div>
+            <h4>Escolha</h4>
+            <p>Navegue pelas fotos e conheça a história de cada cãozinho disponível.</p>
+        </div>
+        <div class="step">
+            <div class="step-icon">2</div>
+            <h4>Entrevista</h4>
+            <p>Batemos um papo para garantir que o perfil do pet combina com sua rotina.</p>
+        </div>
+        <div class="step">
+            <div class="step-icon">3</div>
+            <h4>Finalize</h4>
+            <p>Assine o termo de responsabilidade e leve seu novo amigo para casa!</p>
+        </div>
+    </section>
+
+</main>
+
+<div id="doe"></div>
+<footer class="footer" id="contato">
+    <div class="footer-content">
+        <p><strong>Adopt-Me</strong> - Conectando humanos e cães desde 2026.</p>
+        <p>Siga-nos nas redes sociais: @adoptme_oficial</p>
+        <p>Tem dúvidas? Envie uma mensagem e vamos ajudar você a encontrar o pet ideal.</p>
+        <p>&copy; 2026 Escola IANES - Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
